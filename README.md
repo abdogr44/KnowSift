@@ -2,30 +2,33 @@
 
 KnowSift is an AI-powered browser and YouTube extension that summarizes, organizes, and tracks insights from business-related videos—turning passive watching into active learning. Paste a YouTube link to get a concise summary, action points, tags, and spaced-repetition cards.
 
+This repository is a **Next.js** monorepo managed with **pnpm** and **Turborepo**. The UI is styled with **Tailwind CSS**.
+
 ## Project Goals
 
 - Provide concise summaries of YouTube content using AI
 - Allow users to collect notes and highlights across videos
 - Build a searchable knowledge base for repeated reference
 
-## Planned Structure
+## Repository Layout
 
 ```
-/packages          Monorepo workspace for all code
-  extension/      Browser extension source
-  api/            Server-side API and services
-  ui/             Shared UI components
+/apps             Next.js applications
+  web/            Public web app (Next.js 14 + Tailwind CSS)
+/packages         Shared code consumed by the apps
+  core-ai/        AI utilities
+  scraper/        Data scraping helpers
 ```
 
-This repository will use pnpm workspaces to manage the packages.
+The workspace is managed with **pnpm** and **Turborepo**.
 
 ## Tech Stack
 
-- **TypeScript** and **React** for front‑end development
-- **Node.js** with **Express** for backend services
-- **Prisma** with **PostgreSQL** for data management
-- **Vite** for fast bundling and development
+- **Next.js 14** and **React** for web applications
+- **Tailwind CSS** for styling
+- **TypeScript** throughout the repo
 - **pnpm** for package management
+- **Turborepo** for task orchestration
 
 ## Getting Started
 
@@ -33,10 +36,11 @@ This repository will use pnpm workspaces to manage the packages.
    ```bash
    pnpm install
    ```
-2. Start the development server:
+2. Start the development server for all apps:
    ```bash
    pnpm dev
    ```
+   This runs `turbo dev`, which executes each workspace's `dev` script concurrently.
 
 These commands will evolve as the monorepo grows, but they provide a basic workflow for now.
 

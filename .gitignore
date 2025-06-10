@@ -1,11 +1,19 @@
+# Dependencies
 node_modules/
+
+# Build outputs
 .next/
 dist/
-.turbo/
-coverage/
 build/
 out/
-=======
+
+# Turbo cache and coverage
+.turbo/
+coverage/
+
+# Package manager lockfile
 pnpm-lock.yaml
+
+# Environment variables
 .env*
 !.env.example

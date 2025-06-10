@@ -9,12 +9,12 @@ describe('fetchTranscript', () => {
     mockFetch.mockResolvedValue({
       ok: true,
       json: async () => [{ transcript: 'hello', metadata: { title: 't' } }]
-    } as any);
-    (global as any).fetch = mockFetch;
+    } as unknown as { ok: boolean; json: () => Promise<unknown> });
+    (global as unknown as { fetch: jest.Mock }).fetch = mockFetch;
   });
 
   afterEach(() => {
-    (global as any).fetch = oldFetch;
+    (global as unknown as { fetch: typeof mockFetch }).fetch = oldFetch as typeof mockFetch;
     mockFetch.mockReset();
   });
 

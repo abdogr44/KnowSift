@@ -1,0 +1,16 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+.next/
+dist/
+build/
+out/
+
+# Turbo cache and coverage
+.turbo/
+coverage/
+test-results/
+
+# Playwright reports
+playwright-report/

@@ -8,6 +8,13 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "lib": ["esnext"],
-    "types": ["node"]
+    "types": ["node", "jest"]
+    "lib": [
+      "esnext"
+    ],
+    "types": [
+      "node",
+      "jest"
+    ]
   }
 }

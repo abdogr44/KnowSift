@@ -45,6 +45,7 @@ The workspace is managed with **pnpm** and **Turborepo**.
    - `DEEPSEEK_API_KEY`
    - `UPSTASH_REDIS_REST_URL`
    - `UPSTASH_REDIS_REST_TOKEN`
+
 2. Install dependencies:
    ```bash
    pnpm install
@@ -56,6 +57,12 @@ The workspace is managed with **pnpm** and **Turborepo**.
    This runs `turbo dev`, which executes each workspace's `dev` script concurrently.
 
 These commands will evolve as the monorepo grows, but they provide a basic workflow for now.
+
+### Authentication
+
+The web app uses **Supabase Auth**. Visit `/login` and enter your email to
+receive a magic link. The API expects the `Authorization` header with the
+Supabase access token when making requests.
 
 ## Development
 

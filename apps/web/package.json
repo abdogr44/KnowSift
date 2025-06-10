@@ -5,7 +5,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "lint": "eslint . --ext .ts,.tsx,.js,.jsx -c ../../.eslintrc.json",
+    "format": "prettier --write ."
   },
   "dependencies": {
     "next": "14.0.0",

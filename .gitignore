@@ -5,5 +5,7 @@ dist/
 coverage/
 build/
 out/
+=======
+pnpm-lock.yaml
 .env*
 !.env.example

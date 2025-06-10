@@ -32,7 +32,15 @@ The workspace is managed with **pnpm** and **Turborepo**.
 
 ## Getting Started
 
-1. Copy `.env.example` to `.env.local` and populate the values.
+1. Copy `.env.example` to `.env.local` and populate these values:
+
+   - `NEXT_PUBLIC_SUPABASE_URL`
+   - `NEXT_PUBLIC_SUPABASE_ANON_KEY`
+   - `SUPABASE_SERVICE_ROLE_KEY`
+   - `OPENROUTER_API_KEY`
+   - `APIFY_TOKEN`
+   - `UPSTASH_REDIS_REST_URL`
+   - `UPSTASH_REDIS_REST_TOKEN`
 2. Install dependencies:
    ```bash
    pnpm install

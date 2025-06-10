@@ -40,6 +40,15 @@ This repository will use pnpm workspaces to manage the packages.
 
 These commands will evolve as the monorepo grows, but they provide a basic workflow for now.
 
+## Development
+
+See [DEVELOPMENT.md](DEVELOPMENT.md) for full guidelines. In short:
+
+- Use **Node.js 18**.
+- Run `pnpm lint` and `pnpm format` before committing changes.
+- Tests will use **Jest** and **Playwright** (`pnpm test` and `pnpm test:e2e`).
+- Create feature branches and open pull requests against `main`.
+
 ## Contributing
 
 Community involvement is welcome! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on how to get started.

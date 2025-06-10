@@ -32,7 +32,9 @@ The workspace is managed with **pnpm** and **Turborepo**.
 
 ## Getting Started
 
-1. Copy `.env.example` to `.env.local` and populate these values:
+1. Copy `.env.example` to `.env.local`. It contains placeholder values for the
+   environment variables used throughout the apps. Replace each placeholder with
+   your own credentials:
 
    - `NEXT_PUBLIC_SUPABASE_URL`
    - `NEXT_PUBLIC_SUPABASE_ANON_KEY`

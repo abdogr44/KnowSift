@@ -10,7 +10,7 @@ export interface TranscriptResult {
   metadata: Record<string, unknown>;
 }
 
-const ACTOR_ID = 'apify/website-content-crawler';
+const ACTOR_ID = 'pintostudio/youtube-transcript-scraper';
 
 /**
  * Calls the Apify actor to fetch a transcript for the given URL.

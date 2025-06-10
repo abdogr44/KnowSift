@@ -32,11 +32,12 @@ The workspace is managed with **pnpm** and **Turborepo**.
 
 ## Getting Started
 
-1. Install dependencies:
+1. Copy `.env.example` to `.env.local` and populate the values.
+2. Install dependencies:
    ```bash
    pnpm install
    ```
-2. Start the development server for all apps:
+3. Start the development server for all apps:
    ```bash
    pnpm dev
    ```

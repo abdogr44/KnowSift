@@ -1,22 +1,22 @@
 import { NextResponse } from 'next/server';
 import { Queue } from 'bullmq';
 
-const APIFY_TOKEN = process.env.APIFY_TOKEN;
 const UPSTASH_URL = process.env.UPSTASH_REDIS_REST_URL;
 const UPSTASH_TOKEN = process.env.UPSTASH_REDIS_REST_TOKEN;
 
-if (!APIFY_TOKEN) {
-  throw new Error('APIFY_TOKEN is not set');
-}
 if (!UPSTASH_URL || !UPSTASH_TOKEN) {
   throw new Error('Upstash Redis env vars are not set');
 }
 
 function getRedisConfig() {
-  const host = new URL(UPSTASH_URL!).hostname;
-  const match = host.match(/-(\d+)\.upstash\.io$/);
-  const port = match ? parseInt(match[1], 10) : 6379;
-  return { host, port, password: UPSTASH_TOKEN!, tls: {} };
+  const { hostname } = new URL(UPSTASH_URL!);
+  return {
+    host: hostname,
+    port: 6379,
+    username: 'default',
+    password: UPSTASH_TOKEN!,
+    tls: {},
+  };
 }
 
 const queue = new Queue('ingest', {

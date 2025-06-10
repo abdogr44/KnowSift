@@ -41,6 +41,8 @@ The workspace is managed with **pnpm** and **Turborepo**.
    - `SUPABASE_SERVICE_ROLE_KEY`
    - `OPENROUTER_API_KEY`
    - `APIFY_TOKEN`
+   - `SENTRY_DSN`
+   - `DEEPSEEK_API_KEY`
    - `UPSTASH_REDIS_REST_URL`
    - `UPSTASH_REDIS_REST_TOKEN`
 2. Install dependencies:

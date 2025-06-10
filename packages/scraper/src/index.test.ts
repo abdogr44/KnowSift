@@ -21,7 +21,10 @@ describe('fetchTranscript', () => {
   it('returns transcript and metadata', async () => {
     const result = await fetchTranscript('http://example.com');
     expect(result).toEqual({ transcript: 'hello', metadata: { title: 't' } });
-    expect(mockFetch).toHaveBeenCalled();
+    const expectedEndpoint =
+      'https://api.apify.com/v2/acts/pintostudio/youtube-transcript-scraper/runs/' +
+      'run-sync-get-dataset-items?token=token';
+    expect(mockFetch).toHaveBeenCalledWith(expectedEndpoint, expect.any(Object));
   });
 
   it('throws if token missing', async () => {

@@ -1,3 +1,4 @@
+import { coreAiPlaceholder } from './index';
 /* eslint-disable */
 import {
   coreAiPlaceholder,
@@ -9,8 +10,10 @@ beforeEach(() => {
   jest.resetAllMocks();
 });
 
-test('coreAiPlaceholder returns core-ai', () => {
-  expect(coreAiPlaceholder()).toBe('core-ai');
+describe('coreAiPlaceholder', () => {
+  it('returns core-ai', () => {
+    expect(coreAiPlaceholder()).toBe('core-ai');
+  });
 });
 
 test('summarizeTranscript uses OpenRouter when available', async () => {

@@ -10,6 +10,7 @@ out/
 # Turbo cache and coverage
 .turbo/
 coverage/
+test-results/
 
 # Environment variables
 .env*

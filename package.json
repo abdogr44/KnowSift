@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "echo dev",
-    "build": "echo build",
+    "dev": "turbo dev",
+    "build": "turbo build",
     "lint": "echo lint"
   },
   "keywords": [],
@@ -16,5 +16,8 @@
   "workspaces": [
     "apps/*",
     "packages/*"
-  ]
+  ],
+  "devDependencies": {
+    "turbo": "^2.5.4"
+  }
 }

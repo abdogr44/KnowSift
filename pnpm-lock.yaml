@@ -21,7 +21,7 @@ importers:
         specifier: ^6.7.0
         version: 6.21.0(eslint@8.57.1)(typescript@5.8.3)
       eslint:
-        specifier: ^8.57.0
+        specifier: ^8.57.1
         version: 8.57.1
       jest:
         specifier: ^29.7.0
@@ -61,7 +61,7 @@ importers:
         specifier: ^10.4.21
         version: 10.4.21(postcss@8.5.4)
       eslint:
-        specifier: ^8.57.0
+        specifier: ^8.57.1
         version: 8.57.1
       postcss:
         specifier: ^8.5.4
@@ -76,13 +76,13 @@ importers:
   packages/core-ai:
     devDependencies:
       eslint:
-        specifier: ^8.57.0
+        specifier: ^8.57.1
         version: 8.57.1
 
   packages/scraper:
     devDependencies:
       eslint:
-        specifier: ^8.57.0
+        specifier: ^8.57.1
         version: 8.57.1
 
 packages:

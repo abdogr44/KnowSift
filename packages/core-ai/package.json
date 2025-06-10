@@ -6,10 +6,10 @@
   "scripts": {
     "build": "tsup src/index.ts --dts --tsconfig ./tsconfig.json",
     "lint": "eslint . --ext .ts,.js -c ../../.eslintrc.cjs",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "test": "jest"
   },
   "devDependencies": {
     "eslint": "^8.57.1"
   }
 }
-

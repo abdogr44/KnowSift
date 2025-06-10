@@ -1,7 +1,6 @@
 # KnowSift
 
-
-KnowSift is an AI-powered browser and YouTube extension designed to turn passive video watching into active learning. The project aims to summarize, organize, and track insights from business-related videos so professionals can capture key takeaways with ease.
+KnowSift is an AI-powered browser and YouTube extension that summarizes, organizes, and tracks insights from business-related videos—turning passive watching into active learning. Paste a YouTube link to get a concise summary, action points, tags, and spaced-repetition cards.
 
 ## Project Goals
 
@@ -44,7 +43,3 @@ These commands will evolve as the monorepo grows, but they provide a basic workf
 ## Contributing
 
 Community involvement is welcome! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on how to get started.
-=======
-An AI-powered browser &amp; YouTube extension that summarizes, organizes, and tracks insights from business-related YouTube videos — turning passive watching into active learning.
-Paste a YouTube link, get a concise summary, action points, tags, and spaced-repetition cards.
-

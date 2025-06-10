@@ -9,5 +9,12 @@
     "forceConsistentCasingInFileNames": true,
     "lib": ["esnext"],
     "types": ["node", "jest"]
+    "lib": [
+      "esnext"
+    ],
+    "types": [
+      "node",
+      "jest"
+    ]
   }
 }

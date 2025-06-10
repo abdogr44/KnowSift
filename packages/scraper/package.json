@@ -7,9 +7,14 @@
     "build": "tsup src/index.ts --dts --tsconfig ./tsconfig.json",
     "lint": "eslint . --ext .ts,.js -c ../../.eslintrc.cjs",
     "format": "prettier --write .",
-    "test": "jest"
+    "test": "jest --passWithNoTests"
   },
   "devDependencies": {
     "eslint": "^8.57.1"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.50.0",
+    "bullmq": "^5.53.2",
+    "ioredis": "^5.6.1"
   }
 }

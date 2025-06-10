@@ -4,10 +4,11 @@
   "private": true,
   "main": "src/index.ts",
   "scripts": {
-    "build": "tsup src/index.ts --dts",
-    "lint": "eslint . --ext .ts,.js -c ../../.eslintrc.cjs",
     "build": "tsup src/index.ts --dts --tsconfig ./tsconfig.json",
-    "lint": "eslint . --ext .ts,.js -c ../../.eslintrc.json",
+    "lint": "eslint . --ext .ts,.js -c ../../.eslintrc.cjs",
     "format": "prettier --write ."
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0"
   }
 }

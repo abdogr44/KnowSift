@@ -1,34 +1,8 @@
-import { fetchTranscript } from './index';
+import { Scraper } from './index';
 
-describe('fetchTranscript', () => {
-  const oldFetch = global.fetch;
-  const mockFetch = jest.fn();
-
-  beforeEach(() => {
-    process.env.APIFY_TOKEN = 'token';
-    mockFetch.mockResolvedValue({
-      ok: true,
-      json: async () => [{ transcript: 'hello', metadata: { title: 't' } }]
-    } as unknown as Response);
-    (global as unknown as { fetch: jest.Mock }).fetch = mockFetch;
-  });
-
-  afterEach(() => {
-    (global as unknown as { fetch: jest.Mock }).fetch = oldFetch as typeof mockFetch;
-    mockFetch.mockReset();
-  });
-
-  it('returns transcript and metadata', async () => {
-    const result = await fetchTranscript('http://example.com');
-    expect(result).toEqual({ transcript: 'hello', metadata: { title: 't' } });
-    const expectedEndpoint =
-      'https://api.apify.com/v2/acts/pintostudio/youtube-transcript-scraper/runs/' +
-      'run-sync-get-dataset-items?token=token';
-    expect(mockFetch).toHaveBeenCalledWith(expectedEndpoint, expect.any(Object));
-  });
-
-  it('throws if token missing', async () => {
-    delete process.env.APIFY_TOKEN;
-    await expect(fetchTranscript('http://example.com')).rejects.toThrow();
+describe('Scraper', () => {
+  it('scrape returns expected string', () => {
+    const scraper = new Scraper();
+    expect(scraper.scrape('https://example.com')).toBe('Scraping https://example.com');
   });
 });

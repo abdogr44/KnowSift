@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && node ./scripts/generate-sitemap.js",
     "start": "next start",
     "lint": "eslint . --ext .ts,.tsx,.js,.jsx -c ../../.eslintrc.cjs",
     "format": "prettier --write .",
@@ -13,7 +13,8 @@
   "dependencies": {
     "next": "14.0.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "@sentry/nextjs": "7.91.0"
   },
   "devDependencies": {
     "@types/node": "^20.8.0",

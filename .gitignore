@@ -2,6 +2,10 @@ node_modules/
 .next/
 dist/
 .turbo/
+coverage/
+build/
+out/
+=======
 pnpm-lock.yaml
 .env*
 !.env.example
